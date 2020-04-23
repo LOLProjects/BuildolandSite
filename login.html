@@ -3,17 +3,28 @@
 <head>
 	<title>Buildoland Site</title>
 	<link rel="stylesheet" href="general.css">
+	<link rel="stylesheet" href="form.css">
 </head>
 <body>
 	<header>
 		<a href="index.html"><img id="logo" src="Logov2.png" alt="Buildoland logo"></a>
-		<p class="underline"><a href="blue">Login</a></p>
-		<p class="underline"><a href="blue">Register</a></p>
+		<p class="underline blue"><a class="blue" href="login.html">Login</a></p>
+		<p class="underline blue"><a class="blue" href="register.html">Register</a></p>
 	</header>
 	<div id="main" class="center">
-		<h1 id="title" class="green">Buildoland Alpha</h1>
+		<h1 id="title" class="green outline">Buildoland Alpha</h1>
+		<h3 id="sub">Login (<a class="blue" href="register.html">Don't have an account?</a>)</h3>
 		<form method="POST">
-			
+			<p>
+				<label for="email">Email</label>
+				<input name="email" type="email" placeholder="Guigui220D@example.com" required>
+			</p>
+			<p>
+				<label for="password">Password</label>
+				<input type="password" name="password" required>
+			</p>
+			<p><a class="blue" href="#">Forgot password?</a></p>
+			<p><input id="submit" type="submit" value="Login"></p>
 		</form>
 	</div>
 </body>
