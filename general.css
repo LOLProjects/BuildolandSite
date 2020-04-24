@@ -127,8 +127,7 @@ p
 
 header
 {
-	background-color: #1bb2bd;
-	opacity: 90%;
+	background: rgba(27, 178, 189, 0.8);
 	width: 50vw;
 	height: 10vh;
 	position: fixed;
@@ -170,14 +169,15 @@ header p
 	display: inline-block;
 }
 
+
 #main
 {
 	position: fixed;
 	height: 90vh;
 	width: 50vw;
-	background-color: #1bb2bd;
-	backdrop-filter: blur(4px);
-	opacity: 90%;
+	/*backdrop-filter: blur(4px);*/
+	background: rgba(27, 178, 189, 0.8);
 	display: block;
 	top: 10vh;
 }
+
