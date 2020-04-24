@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="form.css">
 </head>
 <body>
+	<script src="validation.js"></script>
 	<header>
 		<a href="index.html"><img id="logo" src="Logov2.png" alt="Buildoland logo"></a>
 		<p class="underline blue"><a class="blue" href="login.html">Login</a></p>
@@ -14,15 +15,15 @@
 	<div id="main" class="center">
 		<h1 id="title" class="green outline">Buildoland Alpha</h1>
 		<h3 id="sub">Register (<a class="blue" href="login.html">Have an account?</a>)</h3>
-		<form method="POST">
+		<form name="register" method="POST">
 			<p>
 				<label for="email">Email</label>
-				<input name="email" type="email" placeholder="Guigui220D@example.com" required>
+				<input name="email" placeholder="Guigui220D@example.com" type="email" autofocus required>
 			</p>
 			<p>
 				<!-- Add check -->
 				<label for="username">Username</label>
-				<input name="username" placeholder="Guigui220D" required>
+				<input id="username" oninvalid="validateUsername(this)" pattern="[0-9A-Za-z-_]+" maxlength="16" name="username" placeholder="Guigui220D" required>
 			</p>
 			<p>
 				<label for="password">Password</label>
