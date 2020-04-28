@@ -174,7 +174,6 @@ header p
 	position: fixed;
 	height: 90vh;
 	width: 50vw;
-	/*backdrop-filter: blur(4px);*/
 	background: rgba(27, 178, 189, 0.8);
 	display: block;
 	top: 10vh;
