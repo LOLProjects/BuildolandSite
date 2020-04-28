@@ -180,6 +180,12 @@ header p
 	top: 10vh;
 }
 
+ul li
+{
+	margin-top: 10px;
+	font-size: 1em;
+}
+
 
 @media (min-width: 1440px)
 {
