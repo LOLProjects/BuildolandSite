@@ -7,6 +7,26 @@
 </head>
 <body>
 	<script src="validation.js"></script>
+	<script>
+		let shown = false;
+		function showPass()
+		{
+			if (!shown)
+			{
+				document.getElementById("passBtn").innerHTML = "Hide";
+				document.getElementById("newpSec").className = "";
+				document.getElementById("oldpSec").className = "";
+				shown = true;
+			}
+			else
+			{
+				document.getElementById("passBtn").innerHTML = "Change password";
+				document.getElementById("newpSec").className = "invisible";
+				document.getElementById("oldpSec").className = "invisible";
+				shown = false;
+			}
+		}
+	</script>
 	<header>
 		<a class="underline" href="index.html"><img id="logo" src="Logov2.png" alt="Buildoland logo"></a>
 		<p class="underline blue"><a class="blue" href="login.html">Login</a></p>
@@ -15,20 +35,20 @@
 	<div id="main" class="center">
 		<h1 id="title" class="green outline">Buildoland Alpha</h1>
 		<h3 id="sub">Change Account Details</h3>
-		<form name="register">
+		<form name="register" method="POST">
 			<p>
-				<!-- Add check -->
 				<label for="username">Username</label>
-				<input id="username" oninvalid="validateUsername(this)" pattern="[0-9A-Za-z-_]+" maxlength="16" name="username" placeholder="Test">
+				<input id="username" oninvalid="validateUsername(this)" pattern="^[_0-9A-Za-z-]+$" maxlength="16" name="username" placeholder="Test" autofocus>
 			</p>
-			<p>
+			<p id="oldpSec" class="invisible">
 				<label for="password">Old Password</label>
-				<input id="oldp" onChange="passChanged(this);" type="password" name="password">
+				<input onChange="passChanged(this);" type="password" name="oldPass">
 			</p>
-			<p>
+			<p id="newpSec" class="invisible">
 				<label for="password">New Password</label>
-				<input id="newp" onChange="passChanged(this);" type="password" name="password">
+				<input onChange="passChanged(this);" type="password" name="newPass">
 			</p>
+			<p><a id="passBtn" class="blue underline" onclick="showPass();" href="#">Change password</a></p>
 			<p><input id="submit" type="submit" value="Change"></p>
 		</form>
 		<footer>
