@@ -54,7 +54,8 @@ p
 
 .blue, .blue:hover, .blue:active, .blue:visited, .blue:link
 {
-	color: #2167ff;
+	/*color: #2167ff;*/
+	color: #000bb3;
 }
 
 .aliceblue, .aliceblue:hover, .aliceblue:active, .aliceblue:visited, .aliceblue:link
@@ -119,7 +120,7 @@ p
 	bottom: -2px;
 	transform: scaleX(0);
 	transition: transform 0.2s ease-in-out 0s;
-	background-color: #3150ff;
+	background-color: #000bb3;
 }
 
 .underline:hover::before
@@ -136,7 +137,7 @@ p
 
 header
 {
-	background: rgba(27, 178, 189, 0.8);
+	background: rgba(27, 178, 189, 0.55);
 	width: 50vw;
 	height: 10vh;
 	position: fixed;
@@ -164,6 +165,8 @@ header p
 #title
 {
 	padding: .5%;
+	margin-top: 35px;
+	margin-bottom: 25px;
 	font-size: 7.5em;
 }
 
@@ -184,9 +187,14 @@ header p
 	position: fixed;
 	height: 90vh;
 	width: 50vw;
-	background: rgba(27, 178, 189, 0.8);
+	background: rgba(27, 178, 189, 0.55);
 	display: block;
 	top: 10vh;
+}
+
+#about
+{
+	padding: 0 40px;
 }
 
 ul li
